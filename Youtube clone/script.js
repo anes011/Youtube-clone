@@ -75,24 +75,3 @@ const videoItems = [{
     vidAuthor: "GreatStack",
     vidStats: "169K views &#183; 4 months ago"
 }];
-
-const dynamicItems = () => {
-    return (videosGrid.innerHTML = videoItems.map((x) => {
-        return `
-        <div id=${x.id} class="video-container">
-                            <img class="thumbnail" src=${x.img} alt="">
-                            <div class="video-time">5:30</div>
-                            <div class="video-info-container">
-                                <img src="https://yt3.ggpht.com/ytc/AOPolaR9zi_hlH8MQ80WIyB3qcDsqGvcJY2f-HoPcS_gtg=s68-c-k-c0x00ffffff-no-rj" alt="">
-                                <div class="video-info">
-                                    <h1>${x.vidTitle}</h1>
-                                    <p>${x.vidAuthor}</p>
-                                    <p>${x.vidStats}</p>
-                                </div>
-                            </div>
-                        </div>
-        `
-    }).join(""));
-};
-
-dynamicItems();
