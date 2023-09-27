@@ -13,7 +13,7 @@ notiBtn.addEventListener("click", () => {
     }
 });
 
-const videosGrid = document.querySelector(".videos-grid");
+const videosGrid = document.querySelector(".videos-container");
 const videoItems = [{
     id: "sjfopjsfposf",
     img: "https://i.ytimg.com/vi/KqnNbDUiavA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-Y5oEbxxAvAJhzkTCXi5dCiCzyw",

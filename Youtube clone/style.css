@@ -13,6 +13,16 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: #868686;
+    border-radius: 30px;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -260,13 +270,30 @@ header nav div svg, header nav div img {
 }
 
 .sidebar {
-    width: 250px;
+    width: 260px;
     padding: 0 10px;
-    padding-top: 18px;
+    padding-top: 10px;
+    height: 100%;
+    overflow: auto;
     position: fixed;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     background-color: #0f0f0f;
     z-index: 1000;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: #868686;
+    border-radius: 30px;
+    display: none;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    display: block;
 }
 
 .first-container, .second-container, .third-container, .fourth-container, .fifth-container {
@@ -365,9 +392,10 @@ header nav div svg, header nav div img {
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
-    padding-left: 18rem;
-    align-items: center;
+    margin-left: 18rem;
+    margin-right: 2rem;
     position: relative;
+    align-items: center;
 }
 
 .genre-container {
@@ -377,7 +405,7 @@ header nav div svg, header nav div img {
     left: 0;
     padding-bottom: 13px;
     padding-top: 1rem;
-    padding-left: 17rem;
+    padding-left: 18rem;
     z-index: 999;
     background-color: #0f0f0f;
 }
@@ -405,12 +433,11 @@ header nav div svg, header nav div img {
     color: #000;
 }
 
-.videos-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 310px);
-    column-gap: 15px;
-    row-gap: 2.5rem;
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 3.5rem;
+    gap: 15px;
 }
 
 .thumbnail {
@@ -420,6 +447,7 @@ header nav div svg, header nav div img {
 }
 
 .video-container {
+    width: 305px;
     cursor: pointer;
     position: relative;
 }
@@ -474,8 +502,8 @@ header nav div svg, header nav div img {
 }
 
 .first-hr {
-    width: 1606px;
     height: 5px;
+    width: 100%;
     background-color: #434343;
     border: none;
     margin-top: 3rem;
@@ -483,7 +511,7 @@ header nav div svg, header nav div img {
 
 .shorts-close-logo-container {
     display: flex;
-    width: 1606px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.7rem;
@@ -530,13 +558,13 @@ header nav div svg, header nav div img {
 
 .shorts-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1.7rem;
-    width: 1606px;
 }
 
 .short-container {
-    width: 215px;
+    width: 213px;
     cursor: pointer;
 }
 
@@ -599,8 +627,8 @@ header nav div svg, header nav div img {
 
 .more-shorts-btn {
     background-color: transparent;
-    width: 1606px;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 43px;
@@ -624,8 +652,8 @@ header nav div svg, header nav div img {
 }
 
 .under-show-more-shorts-hr {
-    width: 1606px;
     height: 5px;
+    width: 100%;
     background-color: #434343;
     border: none;
     margin-top: 2px;
